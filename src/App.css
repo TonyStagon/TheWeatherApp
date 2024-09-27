@@ -1,47 +1,123 @@
-.App {
-    text-align: center;
+/* General styling */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-@media (max-width: 768px) {
-    .weather-card,
-    .search-bar {
-        width: 100%;
-    }
-}
 
-.weather-card {
-    background-color: #f0f0f0;
-    padding: 1rem;
-    margin: 1rem;
-    border-radius: 8px;
-}
+/* Navbar */
 
-@media (prefers-reduced-motion: no-preference) {
-    .App-logo {
-        animation: App-logo-spin infinite 20s linear;
-    }
-}
-
-.App-header {
-    background-color: #282c34;
-    min-height: 100vh;
+.navbar {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
+    justify-content: space-around;
+    padding: 10px;
+    background-color: #333;
+}
+
+.navbar a {
     color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 5px 10px;
+    border-radius: 4px;
 }
 
-.App-link {
-    color: #61dafb;
+.navbar a:hover {
+    background-color: #555;
 }
 
-@keyframes App-logo-spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
+
+/* Search bar */
+
+.search-bar {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.search-bar input {
+    padding: 10px;
+    font-size: 16px;
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.search-bar button {
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.search-bar button:hover {
+    background-color: #555;
+}
+
+.forecast-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.forecast-item {
+    text-align: center;
+    margin: 0 10px;
+}
+
+.forecast-container .weather-card {
+    margin: 10px;
+}
+
+
+/* Weather section */
+
+.weather-section {
+    text-align: center;
+    margin: 20px 0;
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.weather-section h2 {
+    font-size: 24px;
+}
+
+.weather-section p {
+    font-size: 18px;
+}
+
+
+/* Settings page */
+
+.settings-page {
+    padding: 20px;
+}
+
+.setting-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.setting-item button {
+    padding: 10px;
+    border: none;
+    background-color: #333;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.setting-item button:hover {
+    background-color: #555;
 }

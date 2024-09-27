@@ -17,8 +17,7 @@ const SearchBar = ({ onSearch }) => {
         placeholder = "Search location..." /
         >
         <
-        button onClick = { handleSearch } > Search < /button> <
-        /div>
+        button onClick = { handleSearch } > Search </button> </div>
     );
 };
 

@@ -1,0 +1,212 @@
+/* Body styling */
+
+body {
+    font-family: 'Roboto', sans-serif;
+    /* Professional and clean font */
+    background-color: #f5f7fa;
+    /* Light, subtle background */
+    margin: 0;
+    padding: 0;
+    color: #333;
+    /* Dark text for readability */
+}
+
+body.light-theme {
+    background-color: #6692ac;
+    color: #000000;
+}
+
+
+/* Dark Theme Styles */
+
+body.dark-theme {
+    background-color: #3a3737;
+    color: #070606;
+}
+
+
+/* Headings */
+
+h2,
+h3 {
+    color: #004085;
+    /* A dark blue to stand out */
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    /* Modern heading font */
+}
+
+
+/* Search bar styling */
+
+form {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+input[type="text"] {
+    padding: 10px;
+    border: 2px solid #007bff;
+    border-radius: 30px;
+    width: 220px;
+    transition: border 0.3s;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+}
+
+input[type="text"]:focus {
+    border-color: #28a745;
+    /* Green on focus */
+    outline: none;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    margin-left: 10px;
+    margin: 5px;
+    transition: background-color 0.3s;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #218838;
+    /* Slightly darker on hover */
+}
+
+
+/* Weather card */
+
+.weather-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.weather-card h3 {
+    margin: 10px 0;
+}
+
+.weather-card .temp-icon {
+    font-size: 60px;
+    /* Large icon size */
+    color: #007bff;
+}
+
+.weather-details {
+    font-size: 18px;
+    color: #495057;
+}
+
+
+/* Forecast sections */
+
+.hourly-forecast,
+.daily-forecast {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 20px 0;
+}
+
+.forecast-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 20px 0;
+}
+
+.forecast-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 15px;
+    margin: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    flex: 1 1 calc(25% - 20px);
+    /* Responsive flex size */
+    max-width: 150px;
+}
+
+.forecast-item p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #6c757d;
+}
+
+
+/* Weather icons */
+
+.forecast-item .weather-icon {
+    font-size: 40px;
+    /* Large weather icons */
+    color: #ffc107;
+}
+
+
+/* Location list */
+
+.location-list {
+    margin: 20px 0;
+}
+
+.location-list ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.location-list li {
+    background-color: #e9ecef;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px 0;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-align: center;
+}
+
+.location-list li:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+
+/* Responsiveness */
+
+@media (max-width: 1200px) {
+    .forecast-item {
+        flex: 1 1 calc(33% - 20px);
+        /* 3 items per row */
+    }
+}
+
+@media (max-width: 768px) {
+    .forecast-item {
+        flex: 1 1 calc(50% - 20px);
+        /* 2 items per row */
+    }
+}
+
+@media (max-width: 480px) {
+    .forecast-item {
+        flex: 1 1 100%;
+        /* 1 item per row */
+    }
+    input[type="text"] {
+        width: 100%;
+        /* Full-width input on mobile */
+    }
+}
