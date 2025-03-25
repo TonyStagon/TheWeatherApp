@@ -143,6 +143,7 @@ const HomePage = () => {
               windSpeed: liveWeather.windSpeed,
               icon: liveWeather.icon
             }}
+            units={units}
           />
           
         </div>
@@ -160,6 +161,7 @@ const HomePage = () => {
               windSpeed: searchedWeather.windSpeed,
               icon: searchedWeather.icon
             }}
+            units={units}
           />
           {/* Hourly forecast */}
           <h3>Hourly Forecast</h3>
